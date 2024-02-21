@@ -1,6 +1,6 @@
 import styles from "./CrewSection.module.scss";
 import { crew } from "data/crew";
-import clsx from "clsx";
+import { nanoid } from "nanoid";
 
 const CrewSection = () => {
   return (
@@ -9,7 +9,7 @@ const CrewSection = () => {
         <h2 id="about">Nasi specjaliści</h2>
         <ul>
           {crew.map((person) => (
-            <li>
+            <li key={nanoid()}>
               <img
                 src={person.imgSrc}
                 alt={person.name}
