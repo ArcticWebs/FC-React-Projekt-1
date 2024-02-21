@@ -4,9 +4,9 @@ import { nanoid } from "nanoid";
 
 const CrewSection = () => {
   return (
-    <section className={styles.ourCrewSection}>
+    <section id="about" className={styles.ourCrewSection}>
       <div className="container">
-        <h2 id="about">Nasi specjaliści</h2>
+        <h2>Nasi specjaliści</h2>
         <ul>
           {crew.map((person) => (
             <li key={nanoid()}>

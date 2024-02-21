@@ -3,7 +3,6 @@ import clsx from "clsx";
 import logo from "assets/Logo.png";
 import { navOptions } from "data/navOptions";
 import { nanoid } from "nanoid";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import { IoClose, IoMenu } from "react-icons/io5";
 
@@ -29,16 +28,13 @@ const Navbar = () => {
           <ul className={styles.navLinks}>
             {navOptions.map((option) => (
               <li key={nanoid()}>
-                {option.isScroll && <a href={option.path}>{option.name}</a>}
-                {!option.isScroll && (
-                  <Link
-                    to={option.path}
-                    onClick={closeMenuOnMobile}
-                    className={option.isDisallowed && styles.disallowed}
-                  >
-                    {option.name}
-                  </Link>
-                )}
+                <a
+                  href={option.path}
+                  onClick={closeMenuOnMobile}
+                  className={option.isDisallowed && styles.disallowed}
+                >
+                  {option.name}
+                </a>
               </li>
             ))}
           </ul>
