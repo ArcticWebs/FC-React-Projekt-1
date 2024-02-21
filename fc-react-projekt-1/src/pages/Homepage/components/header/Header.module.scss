@@ -1,0 +1,76 @@
+@import "styles/breakpoints.scss";
+
+.mainHeader {
+  height: 100vh;
+  background-image: url(/assets/header.jpg);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: relative;
+}
+
+.mainHeaderOverlay {
+  height: 100%;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-color: black;
+  opacity: 0.4;
+}
+
+.mainHeaderSection {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.mainHeaderContent {
+  height: 215px;
+  width: 100%;
+  max-width: 480px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  z-index: 1;
+
+  h1 {
+    font-size: 36px;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
+
+.mainHeaderButton {
+  width: fit-content;
+
+  padding: 15px 30px;
+  text-align: center;
+
+  border: 3px solid var(--white-color);
+  border-radius: 5px;
+  background-color: transparent;
+
+  color: var(--white-color);
+  font-size: 18px;
+  font-weight: 700;
+
+  @include media(">=laptop") {
+    &:hover {
+      background-color: var(--white-color);
+      color: var(--dark-color);
+    }
+
+    transition: 0.5s;
+  }
+}
