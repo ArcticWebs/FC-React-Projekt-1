@@ -3,11 +3,19 @@ import clsx from "clsx";
 import logo from "assets/Logo.png";
 import { navOptions } from "data/navOptions";
 import { nanoid } from "nanoid";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoClose, IoMenu } from "react-icons/io5";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth <= 1024 && showMenu) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "initial";
+    }
+  });
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
