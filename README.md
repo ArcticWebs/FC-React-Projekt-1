@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
-https://sparkling-mooncake-23c82a.netlify.app
+https://luminous-semifreddo-63c274.netlify.app/
 
->>>>>>> b9cf39c64b4733abb48e7c0d032fa240ffa16c00
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
