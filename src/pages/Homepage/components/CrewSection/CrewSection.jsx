@@ -1,26 +1,16 @@
 import styles from "./CrewSection.module.scss";
 import { crew } from "data/crew";
 import { nanoid } from "nanoid";
+import PersonTile from "./components/PersonTile";
 
 const CrewSection = () => {
   return (
     <section id="about" className={styles.ourCrewSection}>
       <div className="container">
-        <h2>Nasi specjaliści</h2>
-        <ul>
+        <h2 className="sectionHeading">Nasi specjaliści</h2>
+        <ul className={styles.ourCrewList}>
           {crew.map((person) => (
-            <li key={nanoid()}>
-              <img
-                src={person.imgSrc}
-                alt={person.name}
-                className={styles.personImage}
-              />
-
-              <div className={styles.personDescription}>
-                <h4>{person.name}</h4>
-                <p>{person.description}</p>
-              </div>
-            </li>
+            <PersonTile person={person} key={nanoid()} />
           ))}
         </ul>
       </div>

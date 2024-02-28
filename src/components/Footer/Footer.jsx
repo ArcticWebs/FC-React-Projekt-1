@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className={styles.footer}>
       <section className={clsx("container", styles.footerContent)}>
         <p>Lanthan Electronics - wszelkie prawa zastrzeżone, 2023</p>
-        <div>
+        <div className={styles.smIcons}>
           <FaInstagram />
           <FaFacebookSquare />
         </div>

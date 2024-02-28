@@ -1,4 +1,3 @@
-import Footer from "components/Footer/Footer";
 import Header from "./components/header/Header";
 import CrewSection from "./components/CrewSection/CrewSection";
 import Services from "./components/Services/Services";
@@ -9,7 +8,6 @@ const Homepage = () => {
       <Header />
       <CrewSection />
       <Services />
-      <Footer />
     </>
   );
 };

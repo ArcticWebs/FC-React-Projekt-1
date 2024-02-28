@@ -35,11 +35,14 @@ const Navbar = () => {
         <div className={clsx(styles.menu, showMenu && styles.showMenu)}>
           <ul className={styles.navLinks}>
             {navOptions.map((option) => (
-              <li key={nanoid()}>
+              <li className={styles.navItem} key={nanoid()}>
                 <a
                   href={option.path}
                   onClick={closeMenuOnMobile}
-                  className={option.isDisallowed && styles.disallowed}
+                  className={clsx(
+                    styles.navLink,
+                    option.isDisallowed && styles.disallowed
+                  )}
                 >
                   {option.name}
                 </a>
